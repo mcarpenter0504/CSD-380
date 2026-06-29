@@ -1,0 +1,52 @@
+Version Control Guidelines
+
+Version control is basically about ways to make changes so multiple people can work on the same project without overwriting each other’s work or losing track of what changed. After looking at three sources, the overall idea is the same: version control is about organization, traceability, and collaboration. The difference is how modern each approach is.
+
+The document management site is more focused on traditional file-based systems. It talks about things like manually naming files, version numbering (like v1, v2, final_final), and keeping structured records of changes. This works in basic office environments, but it doesn’t really match how development teams work today because it relies too much on manual tracking.
+
+The University of Washington guide is closer to real development workflows. It focuses on making small, meaningful commits, writing clear commit messages, and not mixing unrelated changes together. It also stresses staying in sync with other people’s work. This lines up more with Git-based workflows, even though it doesn’t fully go into modern GitHub practices like pull requests and branching strategies.
+
+GetNerdify’s article is the most aligned with how things are done in industry today. It emphasizes structured workflows, clean history, and collaboration through Git. It’s more practical and closer to how teams actually operate.
+
+What’s outdated
+
+Some older practices don’t really matter anymore:
+
+Manually tracking versions in file names (like “final_v3.docx”) is basically replaced by Git history.
+
+Check-in/check-out systems are outdated compared to real-time collaboration tools and Git workflows.
+
+Keeping local-only “master copies” doesn’t make sense in team-based development anymore.
+
+My version control guidelines (based on my actual workflow)
+
+I picked these based on what I do day to day at work:
+
+Use a GitHub repo with a clear branching structure (main, dev, feature branches)
+main is production-ready, dev is the integration branch, and all work happens in feature branches.
+
+Never commit directly to main or dev
+Everything goes through a feature branch first so nothing breaks shared code.
+
+Use pull requests for every change
+This is where code review happens. Nothing gets merged without at least one review.
+
+Keep commits small and focused
+Each commit should represent one logical change so it’s easy to trace and rollback if needed.
+
+Write clear commit messages
+Not just “fix bug,” but what actually changed and why.
+
+Regularly sync your branch with dev
+This avoids huge merge conflicts later and keeps everything up to date.
+
+These guidelines matter because they match how I actually work in GitHub every day. The biggest thing that improves quality isn’t just using Git—it’s using a structured workflow with branches, reviews, and clean commits so nothing becomes chaotic or untraceable.
+
+
+Resources:
+
+https://documentmanagementsoftware.com/document-version-control-techniques/
+
+https://homes.cs.washington.edu/~mernst/advice/version-control.html
+
+https://getnerdify.com/blog/version-control-best-practices
